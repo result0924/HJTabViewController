@@ -12,7 +12,7 @@ s.author       = { 'panghaijiao' => '275742376@qq.com' }
 
 s.platform     = :ios, '8.0'
 
-s.source       = { :git => "git@github.com:panghaijiao/HJTabViewController.git", :tag => s.version.to_s }
+s.source       = { :git => "git@github.com:phinix/HJTabViewController.git", :tag => s.version.to_s }
 
 s.source_files  = 'HJTabViewController/**/*.{h,m}'
 

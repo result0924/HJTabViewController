@@ -318,7 +318,13 @@
         headRect.size.height = self.headerZoomIn ? -scrollView.contentOffset.y : _headParameter.headHeight;
     }
     self.tabHeaderView.frame = headRect;
-    
+
+    if ([self.tabHeaderView isKindOfClass:[UIScrollView class]]) {
+        UIScrollView *headScrollView = (UIScrollView *)self.tabHeaderView;
+        CGFloat y = MIN(0, scrollView.contentOffset.y + _headParameter.headHeight);
+        [headScrollView setContentOffset:CGPointMake(0, y)];
+    }
+
     CGFloat percent = 1;
     if (_headParameter.minHeadFrameOriginY != 0) {
         percent = MAX(0, CGRectGetMinY(headRect) / _headParameter.minHeadFrameOriginY);

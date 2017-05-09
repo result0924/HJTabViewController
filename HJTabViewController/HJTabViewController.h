@@ -56,6 +56,11 @@
 
 - (void)reloadData;
 
+- (void)layoutHeaderView;
+
+- (void)layoutControllerView;
+
+
 /*
  Plugin
  */

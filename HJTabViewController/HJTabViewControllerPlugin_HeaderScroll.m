@@ -28,7 +28,10 @@
 
 - (void)scrollViewDidScrollToIndex:(NSInteger)index {
     UIViewController *vc = [self.tabViewController viewControllerForIndex:index];
-    [self.tabViewController.view addGestureRecognizer:vc.tabContentScrollView.panGestureRecognizer];
+    
+    if (vc.tabContentScrollView.panGestureRecognizer) {
+        [self.tabViewController.view addGestureRecognizer:vc.tabContentScrollView.panGestureRecognizer];
+    }
 }
 
 @end
